@@ -33,7 +33,7 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-struct SineWaveShape: Shape {
+public struct SineWaveShape: Shape {
     
     var animatableData: Double {
         get { phase }
