@@ -31,6 +31,8 @@
  */
 import SwiftUI
 
+#if canImport(UIKit)
+
 struct SineWaveShape: Shape {
     
     var animatableData: Double {
@@ -91,43 +93,4 @@ struct SineWaveShape: Shape {
         return Path(path.cgPath)
     }
 }
-
-struct WaveSineView_Previews: PreviewProvider {
-    static let strength: Double = 10
-    static let frequency: Double = 60
-    static var phase: Double = 0
-    static let width: CGFloat = 420
-    static let height: CGFloat = 400
-    
-    static var previews: some View {
-        ZStack {
-            Circle()
-                .stroke(Color.blue, lineWidth: 2.0)
-                .background(
-                    SineWaveShape(percent: 99 / 100, strength: Self.strength, frequency: frequency, phase: Self.phase)
-                        //                            .fill(Color(.blue))
-                        .stroke(Color.blue)
-                        .frame(width: width, height: height, alignment: .bottom)
-                        .rotationEffect(.zero)
-                        .animation(
-                            Animation.linear(duration: 3).repeatForever(autoreverses: false)
-                        )
-                        .onAppear {
-                            withAnimation(
-                                Animation.linear(duration: 3)
-                                    .repeatForever(autoreverses: false)) {
-                                Self.phase = .pi * 2
-                            }
-                        }
-            )
-                
-//            Circle()
-//                .stroke(Color.red, lineWidth: 1.0)
-//                .frame(width: 200, height: 200, alignment: .bottom)
-//                .background(Color.clear)
-        }
-        .preferredColorScheme(.dark)
-        .background(Color(.yellow))
-        .frame(width: 420, height: 400)
-    }
-}
+#endif
