@@ -35,7 +35,7 @@ import SwiftUI
 
 public struct SineWaveShape: Shape {
     
-    var animatableData: Double {
+    public var animatableData: Double {
         get { phase }
         set { self.phase = newValue }
     }
@@ -51,7 +51,7 @@ public struct SineWaveShape: Shape {
     // 波浪的相位
     var phase: Double
     
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         let path = UIBezierPath()
         let width = Double(rect.width)
         let height = Double(rect.height)
