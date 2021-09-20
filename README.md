@@ -4,7 +4,7 @@
 
 
 
-A SwiftUI implementation of Wave animating view.
+A SwiftUI implementation of Wave animating shape.
 
 ## Preview
 
