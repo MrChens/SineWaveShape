@@ -21,10 +21,10 @@ A SwiftUI implementation of Wave animating shape.
 
 
 ```swift
-improt SineWaveShape
-SineWaveShape(percent: 0.4, strength: 30 * 0.9, frequency: 5 + 2, phase: 0)
+import SineWaveShape
+SineWaveShape(percent: 0.4, strength: 30, frequency: 7, phase: 0)
                         .fill(color1)
-                        .offset(y: CGFloat(1) * 1)
+                        .offset(y: CGFloat(1) * 2)
                         .animation(
                             Animation.linear(duration: duration).repeatForever(autoreverses: false)
                         )
