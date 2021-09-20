@@ -52,10 +52,10 @@ public struct SineWaveShape: Shape {
     var phase: Double
     
     public init(
-        percent: Double = percent,
-        strength: Double = strength,
-        frequency: Double = frequency,
-        pahse: Double = pahse
+        percent: Double,
+        strength: Double,
+        frequency: Double,
+        pahse: Double
     
     ) {
         self.init(percent: percent, strength: strength, frequency: frequency, pahse: pahse)
