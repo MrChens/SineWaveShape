@@ -51,6 +51,16 @@ public struct SineWaveShape: Shape {
     // 波浪的相位
     var phase: Double
     
+    public init(
+        percent: Double = percent,
+        strength: Double = strength,
+        frequency: Double = frequency,
+        pahse: Double = pahse
+    
+    ) {
+        self.init(percent: percent, strength: strength, frequency: frequency, pahse: pahse)
+    }
+    
     public func path(in rect: CGRect) -> Path {
         let path = UIBezierPath()
         let width = Double(rect.width)
