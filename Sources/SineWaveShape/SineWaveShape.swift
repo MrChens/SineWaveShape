@@ -58,7 +58,10 @@ public struct SineWaveShape: Shape {
         phase: Double
     
     ) {
-        self.init(percent: percent, strength: strength, frequency: frequency, phase: phase)
+        self.percent = percent
+        self.strength = strength
+        self.frequency = frequency
+        self.phase = phase
     }
     
     public func path(in rect: CGRect) -> Path {
