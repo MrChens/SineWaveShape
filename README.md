@@ -22,7 +22,7 @@ A SwiftUI implementation of Wave animating shape.
 
 ```swift
 improt SineWaveShape
-SineWaveShape(percent: percent, strength: strength * 0.9, frequency: frequency + 2, phase: self.phase)
+SineWaveShape(percent: 0.4, strength: 30 * 0.9, frequency: 5 + 2, phase: 0)
                         .fill(color1)
                         .offset(y: CGFloat(1) * 1)
                         .animation(
