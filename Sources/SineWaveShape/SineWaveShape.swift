@@ -31,8 +31,6 @@
  */
 import SwiftUI
 
-#if canImport(UIKit)
-
 public struct SineWaveShape: Shape {
     
     public var animatableData: Double {
@@ -65,7 +63,7 @@ public struct SineWaveShape: Shape {
     }
     
     public func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath()
+        var path = Path()
         let width = Double(rect.width)
         let height = Double(rect.height)
         let midWidth = width / 2
@@ -102,8 +100,7 @@ public struct SineWaveShape: Shape {
         
         path.addLine(to: CGPoint(x: rect.width, y: rect.height))
         path.addLine(to: CGPoint(x: 0, y: rect.height))
-        path.close()
-        return Path(path.cgPath)
+        path.closeSubpath()
+        return path
     }
 }
-#endif
